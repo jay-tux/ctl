@@ -22,19 +22,22 @@ In the regexes below, `<>` mean placeholders (shouldn't contain spaces) and `[]`
   - then one or more of `INITIAL` (mark a state as initial) and/or `ACCEPTING` (mark a state as accepting, currently unused), 
   - then the name of the state, 
   - then zero or more atomic propositions (labels); separated by spaces and surrounded by parentheses.
-  ONE NODE PER LINE
+
+ONE NODE PER LINE
+
 2) Defining transitions: `TRANS <node 1> -> <node 2>`, or in human language:
   - Keyword `TRANS`,
   - then the name of the first (start) node,
   - then the name of the second (destination) node.
-  ONE TRANSITION PER LINE, CAN'T USE NODES BEFORE THEIR DECLARATION
+
+ONE TRANSITION PER LINE, CAN'T USE NODES BEFORE THEIR DECLARATION
 
 Additionally, you can start a line with `//` to mark a comment.
 
 ## CTL Formulae
 (see [example/formula.ctl](./example/formula.ctl) for an example).
 
-Formulae should be given in ECTL (existential normal form). This means we suppor the following operators/tokens:
+Formulae should be given in ECTL (existential normal form). This means we support the following operators/tokens:
  - the literal `true`, `TRUE`, `True` (all equivalent);
  - atomic propositions (alphanumerical and `_`);
  - negation using `!`;
