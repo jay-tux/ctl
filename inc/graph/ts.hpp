@@ -59,7 +59,7 @@ public:
   inline sparse_ts() = default;
   size_t add(std::string &&name, std::unordered_set<prop> &&ap, bool is_initial, bool is_accepting);
   void add_transition(size_t start, size_t end);
-  constexpr std::vector<node> all_nodes() { return nodes; }
+  inline std::vector<node> all_nodes() { return nodes; }
   constexpr const std::vector<node> &all_nodes() const { return nodes; }
   std::unordered_set<const node *> initial_nodes() const;
 
@@ -96,7 +96,7 @@ public:
   inline dense_ts() = default;
   size_t add(std::string &&name, std::unordered_set<prop> &&ap, bool is_initial, bool is_accepting);
   void add_transition(size_t start, size_t end);
-  constexpr std::vector<node> all_nodes() { return nodes; }
+  inline std::vector<node> all_nodes() { return nodes; }
   constexpr const std::vector<node> &all_nodes() const { return nodes; }
   std::unordered_set<const node *> initial_nodes() const;
 
